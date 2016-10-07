@@ -1,3 +1,10 @@
+/**
+Copyright (C) 2016 Team 20, COMPUT 301, University of Alberta - All Rights Reserved.
+You may use, copy or distribute this code under terms and coditions of University of Alberta
+and Code of Student Behaviour .
+Please contact vlee2@ualberta.ca for more details or questions.
+ */
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -23,14 +30,53 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * This class is the main view class in lonelyTwitter class.
+ * It deals with user inputs, saves/loads them in/from the file FILE_NAME(file.sav).
+ * <p> You can access this file from Android Device Monitor. </p>
+ * <pre> pre-formatted 			text </pre>
+ * <code>
+ *     	pseudo-code that is used in this class
+ *     	step 1 <br>
+ *     	step2 <br>
+ * </code>
+ * <ol>
+ *     <li>first item</li>
+ *     <li>second item</li>
+ *     <li> third item</li>
+ * </ol>
+ * <ul>
+ *     <li>first</li>
+ *     <li<secnd</li>
+ * </ul>
+ *
+ * @author Victoria
+ * @since 1.4
+ * @see NormalTweet
+ * @see java.io.BufferedReader
+ * @see TweetList
+ */
+
 public class LonelyTwitterActivity extends Activity {
+
+	/**
+	 * This is the name of the file that is saved in your virtual device.
+	 * You can access it through Android  Device Monitor by selecting your app,
+	 * then data -> data -> file.sav
+	 * @see NormalTweet
+	 * @author Victoria
+	 */
 
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
 	private ArrayList<Tweet> tweetList = new ArrayList<Tweet>();
 	private ArrayAdapter<Tweet> adapter;
-	
+
+	/**
+	Testing multi-line documentations
+	Testing.
+	 */
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -63,6 +109,11 @@ public class LonelyTwitterActivity extends Activity {
 				R.layout.list_item, tweetList);
 		oldTweetsList.setAdapter(adapter);
 	}
+	/**
+	 * This method loads the json file, generates the tweets from its contents.
+	 * @throws RuntimeException
+	 * @exception FileNotFoundException
+	 */
 
 	private void loadFromFile() {
 		ArrayList<String> tweets = new ArrayList<String>();
