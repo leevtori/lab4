@@ -36,27 +36,26 @@ import com.google.gson.reflect.TypeToken;
  * <p> You can access this file from Android Device Monitor. </p>
  * <pre> pre-formatted 			text </pre>
  * <code>
- *     	pseudo-code that is used in this class
- *     	step 1 <br>
- *     	step2 <br>
+ * pseudo-code that is used in this class
+ * step 1 <br>
+ * step2 <br>
  * </code>
  * <ol>
- *     <li>first item</li>
- *     <li>second item</li>
- *     <li> third item</li>
+ * <li>first item</li>
+ * <li>second item</li>
+ * <li> third item</li>
  * </ol>
  * <ul>
- *     <li>first</li>
- *     <li<secnd</li>
+ * <li>first</li>
+ * <li<secnd</li>
  * </ul>
  *
  * @author Victoria
- * @since 1.4
  * @see NormalTweet
  * @see java.io.BufferedReader
  * @see TweetList
+ * @since 1.4
  */
-
 public class LonelyTwitterActivity extends Activity {
 
 	/**
